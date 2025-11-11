@@ -19,4 +19,13 @@
         --degree:350deg;
         }
     }
+    
+}
+@layer components{
+      .moto1{
+        color: transparent;
+        background-clip: text;
+        background-image: conic-gradient(from 360deg, green,orange,green);
+      
+}
 }
