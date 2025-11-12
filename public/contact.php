@@ -20,7 +20,7 @@
         <!-- nav  started -->
      <nav class=' p-3 bg-black/70 fixed top-0 w-full text-white border-b-[1px] border-b-white'>
       <div class='flex justify-between'>
-        <img src="../sharifi class diagram.png" alt="" class='h-12 w-12 rounded-full'>
+       <img src="../public/images/logo.png" alt="" class='h-full w-14 rounded-full'>
         <ul class='flex flex-row gap-20 text-[20px] items-center'>
             <li><a href="home.php">Home</a></li>
              <li><a href="ourmenu.php">Our menu</a></li>
@@ -115,5 +115,40 @@
         <div class=" mx-auto w-82 rounded-md gap-5">
        <h1 class="text-green-700 font-black text-center pt-8 ">2025 &copy; Designed By Laravel Students</h1>
    </div></div>
+    <!-- footer -->
+   <footer class="bg-gray-900 text-white py-10">
+  <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+    
+    <div>
+      <h3 class="text-lg font-semibold mb-4">About Us</h3>
+      <p class="text-gray-200 text-sm">We serve fresh & delicious food with love. Visit us and enjoy your meal.</p>
+    </div>
+
+    <div>
+      <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+      <ul class="space-y-2 text-sm text-gray-300">
+        <li><a href="#" class="hover:text-white">Home</a></li>
+        <li><a href="#" class="hover:text-white">Contact</a></li>
+        <li><a href="#" class="hover:text-white">About</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="text-lg font-semibold mb-4">Follow Us On</h3>
+      <div class="flex space-x-4 text-xl text-gray-300">
+ <a href="#"><i class="fab fa-facebook-f hover:text-white"></i></a>
+        <a href="#"><i class="fab fa-instagram hover:text-white"></i></a>
+        <a href="#"><i class="fab fa-twitter hover:text-white"></i></a>
+        <a href="#"><i class="fab fa-youtube hover:text-white"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-10 text-center text-sm text-white border-t border-gray-700 pt-4">
+ <h1>   © 2025 YourRestaurant. All rights reserved.</h1>
+  </div>
+</footer>
+
+  <!-- footer -->
 </body>
 </html>

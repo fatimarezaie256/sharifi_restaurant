@@ -5,22 +5,22 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
     $fName = $_POST["fName"];
     $price = $_POST["price"];
     $imgurl = $_FILES["image"]["name"];
-    $tempname = $_FILES["image"]["name"];
+    $tempname = $_FILES["image"]["tmp_name"];
     $folder = "./images/".$imgurl;
     $size = $_POST["size"];
 
-    $select = "SELECT * FROM food WHERE food_name= '$fName'";
+    $select = "SELECT * FROM food WHERE food_name= '$fName'and price= '$price'";
     $selectedFood = $connect->query($select);
     if($selectedFood->num_rows === 0){
         $command = "INSERT INTO food(food_name,price,imgurl) VALUES('$fName','$price','$imgurl')";
-        move_uploaded_file($folder,$tempname);
+        move_uploaded_file($tempname,$folder);
         if($connect->query($command)===true){
-            $selectid = "SELECT food_id FROM food WHERE food_id= '$fName'";
-            $foodid = $connect->query($selectid);
-            $id = $foodid->fetch_assoc();
-            $insertsize = "INSERT INTO food_size(food_id,size) VALUES('$id','$size')";
+            // $selectid = "SELECT food_id FROM food WHERE food_id= '$fName'";
+            // $foodid = $connect->query($selectid);
+            // $id = $foodid->fetch_assoc();
+            $insertsize = "INSERT INTO food_size(food_id,size) VALUES(LAST_INSERT_ID(),'$size')";
             if($connect->query($insertsize)===true){
-                header("location:home.php");
+                header("location:allfoods.php");
             }
             else{
                 header("location:addfood.php");
@@ -48,9 +48,9 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
             <input type="text" name="price" placeholder=" Enter the price" class="border rounded-full focus:outline-blue-700 focus:outline-1 w-[50%] p-2 outline-0 ">
             <input type="file" name="image" placeholder=" Enter food name" class="border rounded-full focus:outline-blue-700 focus:outline-1 w-[50%] p-2  outline-0">
             <select name="size" class="border  rounded-full w-[50%] p-2  outline-0 ">
-                <option class="" value="small">small</option>
-                <option class="" value="medium">medium</option>
-                <option class="" value="large">large</option>
+                <option class="hover:bg-blue-700 hover:text-white" value="small">small</option>
+                <option class="hover:bg-blue-700 hover:text-white" value="medium">medium</option>
+                <option class="hover:bg-blue-700 hover:text-white" value="large">large</option>
             </select>
             <button class="px-6 w-[50%] hover:cursor-pointer rounded-full py-2 bg-blue-700 text-white font-bold">Save</button>
         </form>
