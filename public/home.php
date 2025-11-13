@@ -24,7 +24,10 @@
             <li><a href="contact.php">Contact</a></li>
             <li><a href="about.php">About</a></li>
         </ul>
-        <button class=' font-bold rounded-md px-6 text-[18px] bg-green-700 text-white '> <a href="insertAdmin.php">Login</a></button>
+        <section class="">
+          <option value="">  <button class=' font-bold rounded-md px-6 text-[18px] bg-green-700 text-white '> <a href="insertAdmin.php">Login</a></button></option>
+        <option><button class=' font-bold rounded-md px-6 text-[18px] bg-green-700 text-white '> <a href="insertAdmin.php">Sign up</a></button></option>
+        </section>
       </div>
      </nav>
      <!-- nav ended -->
