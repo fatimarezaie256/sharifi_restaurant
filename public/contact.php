@@ -112,9 +112,7 @@
             </div>
             
         </div>
-        <div class=" mx-auto w-82 rounded-md gap-5">
-       <h1 class="text-green-700 font-black text-center pt-8 ">2025 &copy; Designed By Laravel Students</h1>
-   </div></div>
+     </div>
     <!-- footer -->
    <footer class="bg-gray-900 text-white py-10">
   <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">

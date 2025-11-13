@@ -15,7 +15,7 @@
 <body>
     <div class="h-screen bg-center bg-conic-180  bg-cover w-full" id="hero">
     <!-- nav  started -->
-     <nav class='h-20 p-3 bg-black/40 sticky w-full text-white border-b-[1px] border-b-white'>
+     <nav class='h-20 p-3 bg-black/40 w-full sticky top-0 text-white border-b-[1px] border-b-white'>
       <div class='flex justify-between'>
         <img src="../public/images/logo.png" alt="" class='h-full w-14 rounded-full'>
         <ul class='flex flex-row gap-20 text-[20px] items-center'>
