@@ -24,17 +24,15 @@
             <li><a href="contact.php">Contact</a></li>
             <li><a href="about.php">About</a></li>
         </ul>
-        <section class="">
-          <option value="">  <button class=' font-bold rounded-md px-6 text-[18px] bg-green-700 text-white '> <a href="insertAdmin.php">Login</a></button></option>
-        <option><button class=' font-bold rounded-md px-6 text-[18px] bg-green-700 text-white '> <a href="insertAdmin.php">Sign up</a></button></option>
-        </section>
-      </div>
+       <div class="flex gap-8"><button class=' font-bold rounded-md px-4 text-[18px] hover:border hover:bg-black bg-green-700 text-white '> <a href="login.php">Login</a></button>
+        <button class=' font-bold rounded-md px-4 text-[18px] bg-green-700 text-white hover:border hover:bg-black '> <a href="insertAdmin.php">Sign up</a></button>
+      </div></div>
      </nav>
      <!-- nav ended -->
       <!-- hero started -->
       <h1 class="text-8xl moto font-bold p-20" >The Delicious Way <span class="block ">to Eat <i>Healthy.</i></span></h1>
       <h1 class="text-white pl-20 text-[20px] -mt-10 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente<span class="block "> fuga eaque voluptas temporibus provident hic aliquid nemo officia  </span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
-      <button class="px-5 ml-20 mt-8 hover:cursor-pointer py-4 font-semi-bold bg-green-700 text-white transition-colors duration-700 rounded-md hover:bg-orange-400 hover:opacity-90"><a href="insertAdmin.php">Get Started</a></button>
+      <button class="px-5 ml-20 mt-8 hover:cursor-pointer py-4 font-semi-bold hover:border hover:bg-black bg-green-700 text-white transition-colors duration-700 rounded-md hover:opacity-90"><a href="insertAdmin.php">Get Started</a></button>
     </div> 
       
 

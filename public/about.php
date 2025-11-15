@@ -22,7 +22,9 @@
             <li><a href="contact.php">Contact</a></li>
             <li><a href="about.php">About</a></li>
         </ul>
-        <button class=' font-bold rounded-md px-6 text-[18px] bg-green-700 text-white '> <a href="insertAdmin.php">Login</a></button>
+       <div class="flex gap-8"><button class=' font-bold rounded-md px-4 text-[18px] hover:border hover:bg-black bg-green-700 text-white '> <a href="login.php">Login</a></button>
+        <button class=' font-bold rounded-md px-4 text-[18px] bg-green-700 text-white hover:border hover:bg-black '> <a href="insertAdmin.php">Sign up</a></button>
+      </div></
       </div>
      </nav>
      

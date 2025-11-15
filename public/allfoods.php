@@ -1,12 +1,23 @@
 <?php
 session_start();
 include "connect.php";
+$start = 0;
+$num_of_foods_per_page = 5;
 if(isset($_SESSION['username'])){
-    $dastor = "select f.food_id,f.food_name,f.price,f.imgurl,s.size from food as f inner join food_size as s on f.food_id = s.food_id";
+    $dastor = "select f.food_id,f.food_name,f.price,f.imgurl,s.size from food as f inner join food_size as s on f.food_id = s.food_id order by f.food_name asc limit $start,$num_of_foods_per_page";
     $allfood = $connect->query($dastor);
 }
 else{
     header("location:login.php");
+}
+$result = $connect->query( "Select * From food");
+$num_rows = $result->num_rows;
+$pages =ceil( $num_rows/$num_of_foods_per_page);
+if(isset($_GET["page_nr"])){
+    $nr_page = $_GET["page_nr"] -1;
+    $start = $nr_page * $num_of_foods_per_page;
+      $dastor = "select f.food_id,f.food_name,f.price,f.imgurl,s.size from food as f inner join food_size as s on f.food_id = s.food_id order by f.food_name asc limit $start,$num_of_foods_per_page";
+    $allfood = $connect->query($dastor);
 }
 ?>
 <!DOCTYPE html>
@@ -61,6 +72,22 @@ else{
             }
             ?>
         </table>
+        <div class="w-full flex pl-[40%] mt-16">
+            <div>
+                <a class="border p-2 bg-gray-400 text-white rounded-sm" href="?page_nr=1">First</a>
+                <a  class="border bg-gray-400 text-white p-2" href="">Next</a>
+
+                <?php 
+                for($i = 1;$i<= $pages;$i++){
+                    ?>
+                   <a class="border p-2 rounded-sm text-white bg-green-700" href="?page_nr<= <?php  echo $i ?>"><?php echo $i ?></a>
+                   <?php
+                ?>
+                <?php }?>
+                <a class="border p-2 bg-gray-400 text-white" href="">Prevoius</a>
+                <a class="border p-2 text-white rounded-sm bg-gray-400" href="?page_nr=<?php echo $pages ?>">Last</a>
+            </div>
+        </div>
         <?php
       }
       ?>
